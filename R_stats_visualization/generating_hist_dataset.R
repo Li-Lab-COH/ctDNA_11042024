@@ -3,8 +3,15 @@ library(tidyverse)
 library(data.table)
 library(ggplot2)
 library(gridExtra)
-library(grid)       
+library(grid)
+library(rstudioapi)
+
 #----------------------Prepping -----------------
+
+#setting current wd to files location
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+
 # Define directories
 metadata_file <- "/Users/janzules/Roselab/ctDNA_11042024/docs/samples_metadata.csv"
 qualimap_dir <- "/Users/janzules/Roselab/ctDNA_11042024/results/alignment_metrics/qualimap"
@@ -52,7 +59,7 @@ for (dir in sample_dirs) {
 }
 
 # Verify the structure of the combined data
-print(insert_size_data)
+# print(insert_size_data)
 
 
 #------------Combining ---------------------
@@ -63,6 +70,7 @@ insert_size_df <- bind_rows(insert_size_data)
 # Join metadata with the histogram data by TGen_ID
 combined_data <- left_join(insert_size_df, metadata, by = "TGen_ID")
 
+# write.csv(combined_data, "../../data/combined_data_hist.csv")
 
 #---------------Figures----------------
 
@@ -355,6 +363,7 @@ ggsave(
   dpi = 2400,      # Increase DPI
   units = "in"    # Units in inches
 )
+
 
 
 
