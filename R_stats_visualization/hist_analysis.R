@@ -69,12 +69,8 @@ print(summary_stats)
 write_xlsx(summary_stats, "../../results/alignment_metrics/mapping_QC_analysis/summary_hist_stats.xlsx")
 
 
-
-
-
-
-
-
-
 write.csv(median_fragment_sizes, "../../results/alignment_metrics/mapping_QC_analysis/median_fragment_sizes")
+
+
+#-----------------------Binning Outputs--------------------------------------
 
