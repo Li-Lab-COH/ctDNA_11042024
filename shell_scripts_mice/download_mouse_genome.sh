@@ -5,10 +5,9 @@
 #SBATCH --time=01:00:00  # Adjust time as needed
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=4G
-#SBATCH --partition=standard  # Adjust based on your HPC
 
 # Define variables
-GENCODE_URL="https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/latest_release/gencode.vM36.primary_assembly.genome.fa.gz"
+GENCODE_URL="https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/latest_release/"
 DEST_DIR="/home/janzules/bwa_index/mouse_GRCh39/"  # Adjust to your preferred directory
 
 # Ensure destination directory exists
@@ -18,10 +17,10 @@ mkdir -p "$DEST_DIR"
 cd "$DEST_DIR"
 
 # Download the primary assembly genome
-wget -O gencode.vM36.primary_assembly.genome.fa.gz "$GENCODE_URL"
+wget -O GRCm39.primary_assembly.genome.fa.gz "$GENCODE_URL"
 
 # Verify successful download
-if [ -f "gencode.vM36.primary_assembly.genome.fa.gz" ]; then
+if [ -f "GRCm39.primary_assembly.genome.fa.gz" ]; then
     echo "Download completed successfully."
 else
     echo "Download failed!"

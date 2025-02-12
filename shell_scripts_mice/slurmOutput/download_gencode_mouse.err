@@ -1,0 +1,11 @@
+--2025-02-11 09:26:04--  https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/latest_release/
+Resolving ftp.ebi.ac.uk (ftp.ebi.ac.uk)... 193.62.193.165
+Connecting to ftp.ebi.ac.uk (ftp.ebi.ac.uk)|193.62.193.165|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘GRCm39.primary_assembly.genome.fa.gz’
+
+     0K .......... .                                           88.9M=0s
+
+2025-02-11 09:26:05 (88.9 MB/s) - ‘GRCm39.primary_assembly.genome.fa.gz’ saved [11843]
+

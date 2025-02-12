@@ -12,7 +12,7 @@
 module load BWA/0.7.17-foss-2018b
 
 # Path to your reference genome file
-GENOME_PATH="/home/janzules/bwa_index/Homo_sapiens.GRCh38.dna.primary_assembly.fa"
+GENOME_PATH="/home/janzules/bwa_index/mouse_GRCh39/GRCm39.primary_assembly.genome.fa"
 
 # Run BWA indexing
 bwa index $GENOME_PATH

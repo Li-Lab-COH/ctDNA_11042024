@@ -1,0 +1,219 @@
++++++++++++++++++++++++++++++++++++++++++++++++
+total files: 16
++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14884
+ 
+Analysis complete for YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14884
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0010/YRLP_0010_1_UN_Whole_C1_WGWGS_A14884_22VNMHLT3_CTGAACCTCC_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14884
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14884_R2.fastq.gz
+ 
+Analysis complete for A14884_R2.fastq.gz
+Analysis complete for A14884_R1.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14885
+ 
+Analysis complete for YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14885
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0011/YRLP_0011_1_UN_Whole_C1_WGWGS_A14885_22VNMHLT3_GGCCTTGTTA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14885
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14885_R2.fastq.gz
+ 
+Analysis complete for A14885_R2.fastq.gz
+Analysis complete for A14885_R1.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14883
+ 
+Analysis complete for YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14883
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0009/YRLP_0009_1_UN_Whole_C1_WGWGS_A14883_22VNMHLT3_CCGCTACCAA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14883
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14883_R2.fastq.gz
+ 
+Analysis complete for A14883_R2.fastq.gz
+Analysis complete for A14883_R1.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14886
+ 
+Analysis complete for YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14886
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0012/YRLP_0012_1_UN_Whole_C1_WGWGS_A14886_22VNMHLT3_TTAACGCAGA_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14886
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14886_R2.fastq.gz
+ 
+Analysis complete for A14886_R2.fastq.gz
+Analysis complete for A14886_R1.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14887
+ 
+Analysis complete for YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14887
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0013/YRLP_0013_1_UN_Whole_C1_WGWGS_A14887_22VNMHLT3_AGGTAGTGCG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14887
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14887_R2.fastq.gz
+ 
+Analysis complete for A14887_R1.fastq.gz
+Analysis complete for A14887_R2.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14889
+ 
+Analysis complete for YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R2_001.fastq.gz
+Analysis complete for YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R1_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14889
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0015/YRLP_0015_1_UN_Whole_C1_WGWGS_A14889_22VNMHLT3_ACTTGTGACG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14889
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14889_R2.fastq.gz
+ 
+Analysis complete for A14889_R2.fastq.gz
+Analysis complete for A14889_R1.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14890
+ 
+Analysis complete for YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R2_001.fastq.gz
+Analysis complete for YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R1_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14890
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0016/YRLP_0016_1_UN_Whole_C1_WGWGS_A14890_22VNMHLT3_CCATGCGTTG_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14890
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14890_R2.fastq.gz
+ 
+Analysis complete for A14890_R1.fastq.gz
+Analysis complete for A14890_R2.fastq.gz
+ 
+ 
+-------------------------
+Processing R1: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R1_001.fastq.gz
+Processing R2: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R2_001.fastq.gz
+-------------------------
+ 
+ 
+ 
+Generating FastQC report before cleaning for: A14888
+ 
+Analysis complete for YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R1_001.fastq.gz
+Analysis complete for YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R2_001.fastq.gz
+ 
+FastQC report generated, continuing with cleaning for: A14888
+ 
+Successfully processed: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R2.fastq.gz
+Successfully cleaned: /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R1_001.fastq.gz and /home/janzules/ctDNA_11042024/data/20241101_LH00295_0150_B22VNMHLT3/YRLP_0014/YRLP_0014_1_UN_Whole_C1_WGWGS_A14888_22VNMHLT3_CGTGTAACTT_L003_R2_001.fastq.gz -> /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R1.fastq.gz and /home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R2.fastq.gz
+ 
+Generating FastQC report after cleaning for: A14888
+cleaned R1
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R1.fastq.gz
+cleaned R2
+/home/janzules/ctDNA_11042024/data/output_mice/fastp_cleaned/cleaned/A14888_R2.fastq.gz
+ 
+Analysis complete for A14888_R2.fastq.gz
+Analysis complete for A14888_R1.fastq.gz
