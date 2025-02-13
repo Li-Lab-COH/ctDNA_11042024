@@ -1,4 +1,11 @@
 ###############################################################################
+# TODO: double check cpm calculation and results
+# TODO: double check appropriate z-score values
+# TODO: ADD A description ehre
+###############################################################################
+
+
+
 # Libraries
 ###############################################################################
 library(dplyr)
@@ -17,7 +24,7 @@ combined_data <- read.csv("../../data/combined_data_hist.csv", header = TRUE, st
 # Last element is removed added 1 to it
 # First element is then removed. Begining and ends match in the list locations
 
-bin_breaks <- seq(0, 350, by = 10)  # example
+bin_breaks <- seq(0, 350, by = 30)  # example
 bin_labels <- paste(head(bin_breaks, -1) + 1, bin_breaks[-1], sep = "-")
 
 combined_data <- combined_data %>%
@@ -176,18 +183,18 @@ pheatmap(z_cpm_mat_2, cluster_rows=FALSE, cluster_cols = FALSE,
 
 
 # Save locations:
-raw_image <- "../../figures/Heatmap_raw_bin10.png"
-CPM_image <- "../../figures/Heatmap_CPM_bin10.png"
-
-png(raw_image, width = 3000, height = 2000, res = 300)
-pheatmap(z_raw_mat_2, cluster_rows=FALSE, cluster_cols=FALSE,
-         main="Z-score Heatmap (Raw)")
-dev.off()
-
-png(CPM_image, width = 3000, height = 2000, res = 300)
-pheatmap(z_cpm_mat_2, cluster_rows=FALSE, cluster_cols=FALSE,
-         main="Z-score Heatmap (CPM)")
-dev.off()
+# raw_image <- "../../figures/Heatmap_raw_bin10.png"
+# CPM_image <- "../../figures/Heatmap_CPM_bin10.png"
+# 
+# png(raw_image, width = 3000, height = 2000, res = 300)
+# pheatmap(z_raw_mat_2, cluster_rows=FALSE, cluster_cols=FALSE,
+#          main="Z-score Heatmap (Raw)")
+# dev.off()
+# 
+# png(CPM_image, width = 3000, height = 2000, res = 300)
+# pheatmap(z_cpm_mat_2, cluster_rows=FALSE, cluster_cols=FALSE,
+#          main="Z-score Heatmap (CPM)")
+# dev.off()
 
 # dev.cur()  # Check which graphics device is active
 # dev.new()
