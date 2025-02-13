@@ -103,7 +103,7 @@ ggplot(combined_data, aes(x = InsertSize, y = Frequency, color = as.factor(Timep
   )
 
 
-# Step 6: Perform Statistical Analysis (e.g., comparing means of insert sizes)
+# Perform Statistical Analysis (e.g., comparing means of insert sizes)
 stats <- combined_data %>%
   group_by(Tube, Patient_ID) %>%
   summarize(mean_insert_size = weighted.mean(InsertSize, Frequency, na.rm = TRUE),

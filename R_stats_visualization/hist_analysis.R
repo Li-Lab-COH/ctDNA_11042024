@@ -74,3 +74,5 @@ write.csv(median_fragment_sizes, "../../results/alignment_metrics/mapping_QC_ana
 
 #-----------------------Binning Outputs--------------------------------------
 
+
+
