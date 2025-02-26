@@ -1,3 +1,7 @@
 R_stats_visualization/.RData
 R_stats_visualization/.Rhistory
 .DS_Store
+./fragment_analysis/.idea/
+./fragment_analysis/.DS_Store
+./fragment_analysis/import_test.py
+./fragment_analysis/main.py
