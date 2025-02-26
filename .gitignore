@@ -7,3 +7,4 @@ fragment_analysis/import_test.py
 fragment_analysis/main.py
 fragment_analysis/.idea/
 fragment_analysis/__pycache__/
+.idea/
