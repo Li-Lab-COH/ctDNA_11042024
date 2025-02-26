@@ -5,3 +5,5 @@ R_stats_visualization/.Rhistory
 ./fragment_analysis/.DS_Store
 ./fragment_analysis/import_test.py
 ./fragment_analysis/main.py
+./fragment_analysis/.idea/
+./fragment_analysis/__pycache__/
