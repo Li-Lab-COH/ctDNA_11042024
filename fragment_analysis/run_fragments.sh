@@ -1,16 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=bins_array            # Job name
-#SBATCH --output=/home/janzules/ctDNA_11042024/code/slurmOutput/bins_%A_%a.out
-#SBATCH --error=/home/janzules/ctDNA_11042024/code/slurmOutput/bins_%A_%a.err
-#SBATCH --ntasks=1                       # Number of tasks (processes)
-#SBATCH --cpus-per-task=16               # Number of CPU cores per task
-#SBATCH --mem=128G                       # Memory allocation
-#SBATCH --time=12:00:00                  # Time limit (hh:mm:ss)
+#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bins_%a.out
+#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bins_%a.err
+#SBATCH --ntasks=1                       
+#SBATCH --cpus-per-task=8               
+#SBATCH --mem=32G                       
+#SBATCH --time=12:00:00                 
 #SBATCH --array=0-7                      # Job array index (8 jobs total)
 
 # 1) File with 16 lines, each line = an A-number (e.g., A14891)
 #    E.g.: /home/janzules/ctDNA_11042024/code/slurmOutput/binning/anumber_file.txt
-anumber_file="/home/janzules/ctDNA_11042024/code/slurmOutput/binning/anumber_file.txt"
+anumber_file="/home/janzules/ctDNA_11042024/code/addresses/human_Anumbers.txt"
 
 # 2) Read the lines of anumber_file into an array
 mapfile -t anumbers < "$anumber_file"
@@ -43,7 +43,7 @@ OUTPUT_DIR="/home/janzules/ctDNA_11042024/data/human_binned_sequences"
 
 # 7) Run the Python script
 # Make sure separate_by_fragments.py is accessible, e.g., in the same dir or in your PATH
-python /home/janzules/ctDNA_11042024/code/bins/separate_by_fragments.py \
+python /home/janzules/ctDNA_11042024/code/fragment_analysis/separate_by_fragments.py \
     "$anumber_list_for_python" \
     "$INPUT_DIR" \
     "$OUTPUT_DIR"
