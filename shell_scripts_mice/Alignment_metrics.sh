@@ -53,20 +53,6 @@ while read -r anumber; do
     # Analyzing
 
     if [ -f "$sorted_bam_file" ]; then
-        echo "Collecting insert size for: $anumber"
-
-        # Run Insert Size metrics
-        java -jar /opt/picard/2.21.1/picard.jar CollectInsertSizeMetrics \
-            I=$sorted_bam_file \
-            O=$IS_txt \
-            H=$IS_hist \
-            M=0.5 # 50% of the reads must have an insert size to include that size in the calculations.
-
-        if [ $? -eq 0 ]; then
-            echo "Insert size metrics successful: $anumber"
-        else
-            echo "Error during Insert size collection"
-        fi
         echo "starting quality control collection for: $anumber"
         # Quality Control 
         qualimap bamqc \
@@ -80,19 +66,6 @@ while read -r anumber; do
             echo "Error during Quality map generation"
         fi
         echo "Starting Duplication analysis: $anumber"
-        # # Duplicate metrics
-        # java -jar /opt/picard/2.21.1/picard.jar MarkDuplicates \
-        #     I=$sorted_bam_file \
-        #     O=$dedup_bam_out \
-        #     M=$dup_metrics_out \
-        #     REMOVE_DUPLICATES=false
-
-        # if [ $? -eq 0 ]; then
-        #     echo "Duplication analysis complete for for: $anumber"
-        # else
-        #     echo "Error during Duplication analysis"
-        # fi   
-
 
 
     else
