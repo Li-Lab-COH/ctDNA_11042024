@@ -5,6 +5,8 @@ import sys
 import glob
 import pysam
 import pandas as pd   # <-- We'll use pandas to build the final matrix.
+from datetime import datetime
+
 
 def split_by_fragment_size(
         anumbers,
