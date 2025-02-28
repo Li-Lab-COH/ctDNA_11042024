@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=BinBedtools
-#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/toGFF3/%x_%A_%a.out  
-#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/toGFF3/%x_%A_%a.err   
+#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/full/%x_%A_%a.out  
+#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/full/%x_%A_%a.err   
 #SBATCH --array=0-7                 # 8 jobs for 16 files (2 per job)
-#SBATCH --time=06:00:00             
+#SBATCH --time=012:00:00             
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=32G

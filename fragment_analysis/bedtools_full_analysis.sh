@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=BedtoolsFull
-#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/toGFF3/%x_%A.out  
-#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/toGFF3/%x_%A.err   
+#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/bin/%x_%A.out  
+#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/bin/%x_%A.err   
 #SBATCH --array=0-15  # 16 jobs for 16 BAM files (1 per job)
 #SBATCH --time=06:00:00             
 #SBATCH --ntasks=1
