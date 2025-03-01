@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=BinBedtools
-#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/full/%x_%A_%a.out  
-#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/full/%x_%A_%a.err   
+#SBATCH --output=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/bin/%x_%A.out  
+#SBATCH --error=/home/janzules/ctDNA_11042024/slurmOutput/binningAnalysis/bedtools_JA/bin/%x_%A.err   
 #SBATCH --array=0-7                 # 8 jobs for 16 files (2 per job)
 #SBATCH --time=012:00:00             
 #SBATCH --ntasks=1
@@ -27,15 +27,18 @@ BED_FOLDER="$FOLDER_PATH/bed"
 
 OUTPUT_DIR_GENE="$FOLDER_PATH/bedtools_out/geneIntersect"
 OUTPUT_DIR_NUCL_INTERSECT="$FOLDER_PATH/bedtools_out/nuclIntersect"
-OUTPUT_DIR_NUCL_CLOSEST="$FOLDER_PATH/bedtools_out/nuclClosest"
+# OUTPUT_DIR_NUCL_CLOSEST="$FOLDER_PATH/bedtools_out/nuclClosest"
 
-GFF3_FILE="/home/janzules/reference_genomes/Human_GRCh38_ensembl/annotation_files/Homo_sapiens.GRCh38.113.chr.gff3"
-NUC_FILE="/home/janzules/reference_genomes/Human_GRCh38_ensembl/nucleosomes/GSE71378_prostate_cancer_Snyder_stable_100bp_hg38.bed"
+# This is removed because we don't to find matches to EVERYTHING, but keeping it here as a record for the change
+# GFF3_FILE="/home/janzules/reference_genomes/Human_GRCh38_ensembl/annotation_files/Homo_sapiens.GRCh38.113.chr.gff3"
+GFF3_FILE="/home/janzules/reference_genomes/Human_GRCh38_ensembl/annotation_files/genes_only.gff3"
+NUC_FILE="/home/janzules/reference_genomes/Human_GRCh38_ensembl/nucleosomes/GSE71378_nuc_with_IDs.bed"
 
 # Create output directories if they don't exist
 mkdir -p "$OUTPUT_DIR_GENE"
 mkdir -p "$OUTPUT_DIR_NUCL_INTERSECT"
-mkdir -p "$OUTPUT_DIR_NUCL_CLOSEST"
+# mkdir -p "$OUTPUT_DIR_NUCL_CLOSEST"
+
 
 # Get the list of BED files (sorted for consistency)
 BED_FILES=($(ls "$BED_FOLDER"/*.bed | sort -V))
@@ -72,16 +75,18 @@ for (( i=START_INDEX; i<=END_INDEX; i++ )); do
         NUC_CLOSEST_OUTPUT="$OUTPUT_DIR_NUCL_CLOSEST/${BED_BASENAME}_nucClosest.bed"
 
         # Intersect BED with GFF3 (genes)
-        bedtools intersect -a "$BED_FILE" -b "$GFF3_FILE" -wa -wb > "$GENES_OUTPUT"
+        bedtools intersect -a "$GFF3_FILE" -b "$BED_FILE" -c > "$GENES_OUTPUT"
+        # bedtools intersect -a "$BED_FILE" -b "$GFF3_FILE" -wa -wb > "$GENES_OUTPUT"
         echo "[INFO] Gene intersection saved to: $GENES_OUTPUT"
 
         # Intersect BED with nucleosome BED
-        bedtools intersect -a "$BED_FILE" -b "$NUC_FILE" -wa -wb > "$NUC_OUTPUT"
+        # bedtools intersect -a "$BED_FILE" -b "$NUC_FILE" -wa -wb > "$NUC_OUTPUT"
+        bedtools intersect -a "$NUC_FILE" -b "$BED_FILE" -c > "$NUC_OUTPUT"
         echo "[INFO] Nucleosome intersection saved to: $NUC_OUTPUT"
 
         # Find closest nucleosome (excluding overlaps, reporting distances)
-        bedtools closest -a "$BED_FILE" -b "$NUC_FILE" -D ref -io > "$NUC_CLOSEST_OUTPUT"
-        echo "[INFO] Closest nucleosome positions saved to: $NUC_CLOSEST_OUTPUT"
+        # bedtools closest -a "$BED_FILE" -b "$NUC_FILE" -D ref -io > "$NUC_CLOSEST_OUTPUT"
+        # echo "[INFO] Closest nucleosome positions saved to: $NUC_CLOSEST_OUTPUT"
 
     else
         echo "[WARNING] BED file not found - $BED_FILE" >&2
