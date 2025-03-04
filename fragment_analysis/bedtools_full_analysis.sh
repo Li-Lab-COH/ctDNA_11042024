@@ -81,12 +81,12 @@ for (( i=START_INDEX; i<=END_INDEX; i++ )); do
 
 
     # - Count how many alignments overlap each gene
-    bedtools intersect -a "$GFF3_FILE" -b "$BAM_FILE" -c > "$GENES_OUTPUT"
+    bedtools bamtobed -i "$BAM_FILE" | bedtools intersect -a "$GFF3_FILE" -b stdin -c > "$GENES_OUTPUT"
     echo "[INFO] Gene intersection saved to: $GENES_OUTPUT"
 
 
     # - Count how many alignments overlap each nucleosome region
-    bedtools intersect -a "$NUC_FILE" -b "$BAM_FILE" -c > "$NUC_OUTPUT"
+    bedtools bamtobed -i "$BAM_FILE" | bedtools intersect -a "$NUC_FILE" -b stdin -c > "$NUC_OUTPUT"
     echo "[INFO] Nucleosome intersection saved to: $NUC_OUTPUT"
     
     # echo "[INFO] Beginning Nucleosome closest for $BAM_FILE "
