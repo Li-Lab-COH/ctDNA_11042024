@@ -1,0 +1,5 @@
+/home/janzules/ctDNA_11042024/data/human_binned_sequences/150_180
+/home/janzules/ctDNA_11042024/data/human_binned_sequences/170_220
+/home/janzules/ctDNA_11042024/data/human_binned_sequences/40_150
+/home/janzules/ctDNA_11042024/data/human_binned_sequences/220_345
+/home/janzules/ctDNA_11042024/data/human_binned_sequences/125_155
