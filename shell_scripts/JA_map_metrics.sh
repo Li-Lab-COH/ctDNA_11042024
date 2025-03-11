@@ -47,18 +47,18 @@ for i in $(seq $start_index $end_index); do
     if [ -f "$sorted_bam_file" ]; then
         echo "Processing alignment metrics for: $anumber"
 
-        # Run Picard CollectInsertSizeMetrics
-        java -jar /opt/picard/2.21.1/picard.jar CollectInsertSizeMetrics \
-            I=$sorted_bam_file \
-            O=$IS_txt \
-            H=$IS_hist \
-            M=0.5
+        # # Run Picard CollectInsertSizeMetrics
+        # java -jar /opt/picard/2.21.1/picard.jar CollectInsertSizeMetrics \
+        #     I=$sorted_bam_file \
+        #     O=$IS_txt \
+        #     H=$IS_hist \
+        #     M=0.5
 
-        if [ $? -eq 0 ]; then
-            echo "Insert size metrics successful for: $anumber"
-        else
-            echo "Error during Insert size metrics collection for: $anumber"
-        fi
+        # if [ $? -eq 0 ]; then
+        #     echo "Insert size metrics successful for: $anumber"
+        # else
+        #     echo "Error during Insert size metrics collection for: $anumber"
+        # fi
 
         # Run Qualimap QC
         echo "Starting quality control for: $anumber"
