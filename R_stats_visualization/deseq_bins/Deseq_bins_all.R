@@ -7,9 +7,8 @@ library(qqman)
 
 #---------------------------------Loading Data----------------------------------
 setwd(dirname(getActiveDocumentContext()$path))
-sample_info <- read_tsv("../addresses/sample_metadata.tsv")
-# counts_with_locs <- read_tsv("../../data/human_binned_sequences/ctMatrices/geneCounts/150_180_gene_counts.tsv")
-counts_with_locs <- read_tsv("../../data/human_binned_sequences/ctMatrices/geneCounts/0_345_gene_counts.tsv")
+sample_info <- read_tsv("../../addresses/sample_metadata.tsv")
+counts_with_locs <- read_tsv("../../../data/human_binned_sequences/ctMatrices/geneCounts/0_345_gene_counts.tsv")
 # bin_sizes <- "150_180"
 
 #----------------------------Processing counts----------------------------------
@@ -32,13 +31,13 @@ gene_metadata <- counts_with_locs %>%
 #----------------------------Processing Metadata----------------------------------
 
 sample_info <- sample_info %>%
+  mutate(TGen_ID = as.character(TGen_ID)) %>%
+  column_to_rownames("TGen_ID") %>%
   mutate(
-    TGen_ID = as.character(TGen_ID),
-    Timepoint = factor(as.character(Timepoint)),  # Convert to character first
+    Timepoint = factor(Timepoint),
     Tube = factor(Tube),
     Input = factor(Input)
-  ) %>%
-  column_to_rownames("TGen_ID")
+  )
   
 # Ensure columns in count_mat match row names in sample_info
 all(colnames(count_mtx) %in% rownames(sample_info))  # Should return TRUE
@@ -56,7 +55,7 @@ sample_info <- sample_info[colnames(count_mtx), ]
 # 
 # dds <- DESeq(dds)  # Estimate dispersions
 # 
-# png("../../results/BinAnalysis_R/dispersionPlot_150_180.png", width = 1600, height = 1200, res = 300)
+# png("../../results/BinAnalysis_R/dispersionPlotALL.png", width = 1600, height = 1200, res = 300)
 # plotDispEsts(dds)  # Generate the plot
 # dev.off()
 # 
@@ -70,50 +69,43 @@ sample_info <- sample_info[colnames(count_mtx), ]
 #-------------------- Tp2 vs all----------------------------------------
 
 # Converting all timepoints that are not 2 to other for comparisons
-# sample_info$TP2_vs_All <- ifelse(sample_info$Timepoint == 2, "TP2", "Other")
-# sample_info$TP2_vs_All <- factor(sample_info$TP2_vs_All, levels = c("Other", "TP2"))
+sample_info$TP2_vs_All <- ifelse(sample_info$Timepoint == 2 , "TP2", "Other")
+sample_info$TP2_vs_All <- factor(sample_info$TP2_vs_All, levels = c("Other", "TP2"))
 
 dds <- DESeqDataSetFromMatrix(
   countData = round(as.matrix(count_mtx)),   # Ensure integer counts
   colData   = sample_info,  # Updated metadata
-  design    = ~ Timepoint + Tube + Input  # Adjust as needed
+  design    = ~ TP2_vs_All + Tube + Input  # Adjust as needed
 )
-# dds <- DESeqDataSetFromMatrix(
-#   countData = round(as.matrix(count_mtx)),  
-#   colData   = sample_info,  
-#   design    = ~ TP2_vs_All + Tube + Input  # Use TP2_vs_All instead of Timepoint
-# )
 
 # Run deseq2
 dds <- DESeq(dds)
 
 # Extract Results for TP2 vs. All Other Timepoints
-res <- results(dds, contrast = c("Timepoint", "2", "1"), alpha = 0.05)
-# Extract Results for TP2 vs. All Other Timepoints
-# res <- results(dds, contrast = c("TP2_vs_All", "TP2", "Other"), alpha = 0.15)
-
-# # Selecting by padj
-# sig_genes_padj_0.15 <- res %>%
-#   as.data.frame() %>%
-#   rownames_to_column("gene_id") %>%
-#   filter(padj < 0.005) %>%
-#   arrange(padj)
-
-# # Selecting by pvalue
-# sig_genes_pval_0.05 <- res %>%
-#   as.data.frame() %>%
-#   rownames_to_column("gene_id") %>%
-#   filter(pvalue < 0.05) %>%
-#   arrange(pvalue)
+res <- results(dds, contrast = c("TP2_vs_All", "TP2", "Other"), alpha = 0.15)
 
 
-# # Merging location 
+# Selecting by padj
+sig_genes_padj_0.15 <- res %>%
+  as.data.frame() %>%
+  rownames_to_column("gene_id") %>%
+  filter(padj < 0.15) %>%
+  arrange(padj)
+
+# Selecting by pvalue
+sig_genes_pval_0.05 <- res %>%
+  as.data.frame() %>%
+  rownames_to_column("gene_id") %>%
+  filter(pvalue < 0.05) %>%
+  arrange(pvalue)
+
+# Merging location 
 # sig_genes_with_loc <- sig_genes_pval_0.05 %>%
 #   inner_join(gene_metadata, by="gene_id")
 
 
 #----------------------------- Manhattan plot----------------------------------
-# 
+
 # manhattan_df <- sig_genes_with_loc %>%
 #   dplyr::rename(SNP = gene_id, CHR = chr, BP = start, P = pvalue) %>%
 #   mutate(
@@ -127,7 +119,7 @@ res <- results(dds, contrast = c("Timepoint", "2", "1"), alpha = 0.05)
 #   drop_na()  # Remove any missing values
 # 
 # manhattan(manhattan_df, col = c("blue4", "orange3"), genomewideline = -log10(0.05), suggestiveline = -log10(0.1), main = "Manhattan Plot: TP2 vs. All")
-
+# 
 
 #-------------------------- manhattan all results ---------------------------
 res_df <- as.data.frame(res) %>%
@@ -151,7 +143,7 @@ manhattan_df_all <- res_df %>%
 sig_genes_padj_0.15 <- res_df %>%
   as.data.frame() %>%
   # rownames_to_column("gene_id") %>%
-  filter(padj < 0.005) %>%
+  filter(padj < 0.15) %>%
   arrange(padj)
 
 highlight_genes <- sig_genes_padj_0.15 %>%
@@ -163,7 +155,6 @@ manhattan_df_highlight <- manhattan_df_all %>%
 # sig_genes_padj_0.15 <- sig_genes_padj_0.15 %>%
 #   inner_join(gene_metadata, by="gene_id")
 
-png("../../results/BinAnalysis_R/Full_Genes_Manhattan_2_vs_1_ylim.png", width = 1200, height = 800, res = 150)
 # Plot the Manhattan plot
 manhattan(
   manhattan_df_all, 
@@ -171,10 +162,7 @@ manhattan(
   genomewideline = -log10(0.05), 
   suggestiveline = -log10(0.1), 
   highlight = manhattan_df_highlight$SNP,  # Highlight significant genes
-  main = "Manhattan Plot: 2 vs. 1 - padj: 0.005",
-  ylim = c(0, 10)  # Adjust the upper limit as needed
+  main = "Bin: All Manhattan Plot: TP2 vs. All - padj: 0.15"
 )
-
-dev.off()
 
 write.csv(sig_genes_padj_0.15, "../../results/BinAnalysis_R/150_180_padj0.15.csv")
