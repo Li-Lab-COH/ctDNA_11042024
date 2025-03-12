@@ -11,10 +11,13 @@ library(rstudioapi)
 #setting current wd to files location
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
+# Information Mice
+metadata_file <- "../../docs/mouse_metadata.csv"
+qualimap_dir <- "../../data/qualimap_Mice"
 
-# Define directories
-metadata_file <- "/Users/janzules/Roselab/ctDNA_11042024/docs/samples_metadata.csv"
-qualimap_dir <- "/Users/janzules/Roselab/ctDNA_11042024/results/alignment_metrics/qualimap"
+# # Define directories - Human
+# metadata_file <- "/Users/janzules/Roselab/ctDNA_11042024/docs/samples_metadata.csv"
+# qualimap_dir <- "/Users/janzules/Roselab/ctDNA_11042024/results/alignment_metrics/qualimap"
 
 # Load Metadata
 metadata <- read.csv(metadata_file, stringsAsFactors = FALSE)
@@ -70,7 +73,7 @@ insert_size_df <- bind_rows(insert_size_data)
 # Join metadata with the histogram data by TGen_ID
 combined_data <- left_join(insert_size_df, metadata, by = "TGen_ID")
 
-# write.csv(combined_data, "../../data/combined_data_hist.csv")
+write.csv(combined_data, "../../data/combined_data_hist_mice.csv")
 
 #---------------Figures----------------
 
